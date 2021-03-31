@@ -1,0 +1,214 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* Lato Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+    font-family: 'Lato', sans-serif;
+    background-color: black;
+    /* background-image: url('../src/assets/images/background.png'); */
+    /* background-size: cover; */
+    color: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+
+/* (items) navbar-flex DAD */
+
+.navbar-items-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 1.5 rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+/* (item individual) navbar-flex CHILD */
+
+.navbar-item-flex {
+    margin: 0 1rem 0 1rem;
+}
+
+
+/* music nav */
+
+.music-nav {
+    margin: 0 1rem 0 1rem;
+    cursor: pointer;
+    border: none;
+}
+
+
+/* Detalles esteticos para el nav */
+
+.nav-link,
+.navbar-brand {
+    font-size: x-large;
+    color: white !important;
+}
+
+.nav-item:last-child {
+    margin: 2px red solid;
+}
+
+
+/* Quitar el borde del icono de hamburguesa*/
+
+.navbar-toggler {
+    border-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* item para el dropdown de la obras */
+
+.item-css {
+    font-size: large;
+    font-weight: bold;
+    margin: 1rem 0;
+    color: white;
+}
+
+
+/* dropdown background color */
+
+.dropdown-menu {
+    background-color: black;
+    border: 2px solid white;
+}
+
+
+/* Al situarse en el navbar se despliega. */
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+
+/* transition */
+
+.transition-css {
+    animation: fadeinout 1s linear;
+}
+
+.transition-slow-css {
+    animation: fadeinout 1.3s linear;
+}
+
+.transition-very-slow-css {
+    animation: fadeinout 1.7s linear;
+}
+
+@keyframes fadeinout {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Firefox < 16 */
+
+@-moz-keyframes fadeinout {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Safari, Chrome and Opera > 12.1 */
+
+@-webkit-keyframes fadeinout {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Internet Explorer */
+
+@-ms-keyframes fadeinout {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Opera < 12.1 */
+
+@-o-keyframes fadeinout {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Transition escala  */
+
+.scale {
+    /* Efecto de escala con soporte para distintos navegadores */
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    transition: 1s ease-in-out;
+    opacity: 0.8;
+}
+
+.scale:hover {
+    -webkit-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    transform: scale(1.0);
+    transition: 0.2s ease-in-out;
+    opacity: 1;
+}
+
+
+/* desktop */
+
+@media (min-width: 768px) {
+    .navbar-items-flex {
+        font-size: inherit;
+    }
+    .nav-link:hover {
+        border-bottom: 1px white solid;
+    }
+    .navbar-items-flex {
+        justify-content: center;
+    }
+    .navbar-brand {
+        font-size: 2.5rem;
+    }
+    .music-nav:hover {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-items-flex {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}

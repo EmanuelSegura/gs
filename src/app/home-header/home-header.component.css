@@ -1,0 +1,65 @@
+.position-all-home {
+    /* display: flex; */
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    height: 1080px;
+    width: 100%;
+}
+
+.position-div-home {
+    position: absolute;
+    /* text-align: start; */
+    background-color: transparent;
+}
+
+.text-home-title {
+    margin: 5rem 5rem 1rem 5rem;
+    text-align: center;
+    font-weight: ligther;
+    font-size: 7rem;
+    background-color: transparent;
+}
+
+.text-home-p {
+    font-weight: ligther;
+    text-align: center;
+    /* align-items: left; */
+    font-size: 3.5rem;
+    background-color: transparent;
+    margin: 0 -0 0 0rem;
+    letter-spacing: 2rem;
+    /* Para contrarestar el spacing en la ultima letra */
+    /* margin-right: -2rem; */
+}
+
+@media screen and (max-width: 992px) {
+    .background {
+        /* Para que no use el alto de la imagen y aparezca un scroll vacio. */
+        height: auto;
+        visibility: hidden;
+    }
+    .position-div-home {
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .position-all-home {
+        position: static;
+    }
+    .text-home-title {
+        font-size: 4rem;
+    }
+    .text-home-p {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0;
+        letter-spacing: 1rem;
+        /* Para contrarestar el spacing en la ultima letra */
+        margin-right: -1rem;
+    }
+}

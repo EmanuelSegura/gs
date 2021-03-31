@@ -1,0 +1,37 @@
+/* Quitar linea azul de los links  */
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/* Descripcion de cabecera */
+
+.text-obra-cabecera {
+    font-size: x-large;
+    text-align: justify;
+}
+
+.card-img-overlay {
+    background-color: transparent;
+}
+
+.card-title {
+    background-color: transparent;
+    font-size: 1.5rem;
+}
+
+.card-text {
+    background-color: transparent;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+@media screen and (min-width: 768px) {
+    .card-title {
+        font-size: 3rem;
+    }
+    .card-text {
+        font-size: 1.5rem;
+    }
+}

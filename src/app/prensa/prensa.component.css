@@ -1,0 +1,28 @@
+.imgs-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.article-img {
+    margin: 0 5rem;
+}
+
+
+/* PDF Prensa */
+
+.prensa-pdf-title {
+    text-align: center;
+    font-size: large;
+    padding: 0.5rem 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .imgs-flex {
+        visibility: visible;
+    }
+    .prensa-pdf-title {
+        font-size: xx-large;
+    }
+}

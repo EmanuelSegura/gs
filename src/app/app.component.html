@@ -1,0 +1,64 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark transition-very-slow-css">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-items-flex collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link active navbar-item-flex" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLink]="['/home']">{{home | uppercase}}</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a (click)="playMusic()" class="nav-link dropdown-toggle navbar-item-flex" [routerLink]="['/obra']" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{obra | uppercase}}
+              </a>
+                    <div (click)="playMusic()" class="dropdown-menu transition-css" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item item-css" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLink]="['/obra/espertise']">Serie "El Expértise de las mariposas"</a>
+                        <a class="dropdown-item item-css" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLink]="['/obra/paisajes']">Serie "Paisajes"</a>
+                        <a class="dropdown-item item-css" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLink]="['/obra/acuarelas']">Acuarelas</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navbar-item-flex" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLink]="['/prensa']">{{prensa | uppercase}} </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navbar-item-flex" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLink]="['/about']">{{acercaDe | uppercase}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navbar-item-flex" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLink]="['/contacto']">{{contacto | uppercase}}</a>
+                </li>
+
+                <li class="nav-item">
+                    <a>
+                        <div class="nav-link navbar-item-flex music-nav" (click)='playMusic()' *ngIf="!condition_default; ">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </a>
+
+                    <a>
+                        <div class="nav-link navbar-item-flex music-nav" (click)='pauseMusic()' *ngIf="condition_default; ">
+                            <i class="fas fa-pause"></i>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <audio id="myAudio" loop>
+        <source src="../assets/music/manha.mp3" type="audio/mpeg">
+        Tu navegador no soporta el tag de audio.
+        </audio>
+
+
+
+
+</header>
+
+
+
+
+
+<router-outlet></router-outlet>

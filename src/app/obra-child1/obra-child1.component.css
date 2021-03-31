@@ -1,0 +1,56 @@
+.obra-css {
+    display: flex;
+    justify-content: center;
+    margin: 0 2rem;
+}
+
+.card-title {
+    font-size: 3rem;
+    text-align: justify;
+    /* text-justify: inter-word; */
+}
+
+.card-text {
+    font-size: x-large;
+    text-align: justify;
+    /* text-justify: inter-word; */
+}
+
+
+/* Margen de los articulos con texto */
+
+.obra-margin {
+    margin: 3rem 0 6rem 0;
+}
+
+
+/* epigrafe fotos */
+
+.epigrafe {
+    font-size: 1.2rem;
+}
+
+
+/* fragmento poesia */
+
+.poesia {
+    text-align: left;
+    font-size: x-large;
+    font-style: italic;
+}
+
+
+/* Acomodar los cuadros verticales para aprovechar el espacio */
+
+.verticales-par {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .card-title {
+        font-size: 4rem;
+    }
+    .epigrafe {
+        font-size: 1.5rem;
+    }
+}
